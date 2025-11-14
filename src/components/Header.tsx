@@ -1,4 +1,4 @@
-import Logo from "./Logo.tsx";
+import Logo from "./Logo.tsx"
 import styles from "../styles/Header.module.css"
 
 const Header = (): React.JSX.Element => {
