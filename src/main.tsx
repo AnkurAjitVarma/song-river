@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import Logo from "./components/Logo.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Logo fontSize='3rem' />
   </StrictMode>,
 )
