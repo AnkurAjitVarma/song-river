@@ -1,0 +1,16 @@
+.Header {
+  display: flex;           
+  flex-direction: row;     
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 2rem;           
+  width: 100vw;        
+  padding: 0.5rem;     
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Heading {
+  font-size: 1.5rem;
+  font-family: 'Cinzel Decorative', serif;    
+  font-weight: bold;       
+}
