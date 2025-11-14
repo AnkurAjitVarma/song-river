@@ -1,6 +1,6 @@
-import styles from "../styles/Root.module.css";
-import Header from "./Header.tsx";
-import {Outlet} from "@tanstack/react-router";
+import styles from "../styles/Root.module.css"
+import Header from "./Header.tsx"
+import {Outlet} from "@tanstack/react-router"
 
 const Root = (): React.JSX.Element => {
     return <div className={styles.Root}>
@@ -9,4 +9,4 @@ const Root = (): React.JSX.Element => {
     </div>
 }
 
-export default Root;
+export default Root
