@@ -1,3 +1,57 @@
-.Employee{
+.Employee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex: 1;
+}
 
+.Picture {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.Picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.Name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.FirstName {
+  margin-right: 4px;
+}
+
+.Designation {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  gap: 8px;
+}
+
+.Role {
+  font-weight: 500;
+}
+
+.Team {
+  font-style: italic;
+  color: #888;
 }
