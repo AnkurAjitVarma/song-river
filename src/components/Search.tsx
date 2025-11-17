@@ -5,7 +5,7 @@ import { MdClear } from "react-icons/md";
 import useSearchNavigation from "../hooks/useSearchNavigation.tsx";
 
 const Search = (): JSX.Element => {
-    const { inputRef, handleSearchChange, handleClearSearch } = useSearchNavigation();
+    const { inputRef, handleSearchChange, handleClearSearch } = useSearchNavigation(100);
     return <div className={styles.Search}>
         <span className={styles.Glass}>
             <FaMagnifyingGlass />
