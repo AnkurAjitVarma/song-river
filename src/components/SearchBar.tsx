@@ -4,9 +4,13 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
 import useSearchNavigation from "../hooks/useSearchNavigation.tsx";
 
-const Search = (): JSX.Element => {
+type SearchBarProps = {
+    height?: string,
+}
+
+const SearchBar = ({ height }:SearchBarProps): JSX.Element => {
     const { inputRef, handleSearchChange, handleClearSearch } = useSearchNavigation(100);
-    return <div className={styles.Search}>
+    return <div className={styles.Search} style={{height: height}}>
         <span className={styles.Glass}>
             <FaMagnifyingGlass />
         </span>
@@ -17,4 +21,4 @@ const Search = (): JSX.Element => {
     </div>
 }
 
-export default Search
+export default SearchBar;
