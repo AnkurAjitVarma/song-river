@@ -1,0 +1,33 @@
+.Search {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid gray;
+    flex: 1;
+    height: 36px;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.Glass {
+    height: 100%;
+    padding-inline: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Input {
+    height: 100%;
+    border: none;
+    flex: 1;
+}
+
+.Clear {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding-inline: 0.5rem;
+    border-radius: 10%;
+}
