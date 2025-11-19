@@ -15,8 +15,8 @@ const useSearchNavigation = (debounceMs: number = 300) => {
 
         debounceTimerRef.current = setTimeout(() => {
             navigate({
-                to: '.',
-                search: { q: searchValue || undefined },
+                to: '/',
+                search: { q: searchValue ?? "" },
                 replace: true
             });
         }, debounceMs);

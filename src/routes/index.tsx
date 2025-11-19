@@ -1,10 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
-import SearchResult from "../components/SearchResult.tsx";
+import SearchResults from "../components/SearchResults.tsx";
 import { loaderDataSchema } from "../schemas/employeeSchema.tsx";
 import { searchSchema } from "../schemas/searchSchema.tsx";
 
 export const Route = createFileRoute('/')({
-  component: SearchResult,
+  component: SearchResults,
   validateSearch: (search) => searchSchema.parse(search),
   loaderDeps: ({ search: { q } }) => ({ q }),
   loader: async ({ deps: { q } }) => {
