@@ -6,3 +6,9 @@ html, body, #root {
   display: flex;
   flex-direction: column;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}

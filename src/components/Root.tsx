@@ -5,7 +5,9 @@ import type { JSX } from "react";
 const Root = (): JSX.Element => {
     return <>
         <Header />
-        <Outlet />
+        <main>
+            <Outlet />
+        </main>
     </>
 }
 
