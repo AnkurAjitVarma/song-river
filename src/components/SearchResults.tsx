@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { getRouteApi, Link } from "@tanstack/react-router";
 import styles from "../styles/SearchResults.module.css";
-import type { Employee } from "../schemas/employeeSchema.tsx";
+import type {Employee, LoaderData} from "../schemas/employeeSchema.tsx";
 
 type EmployeeResultProps = {
     firstName: string;
@@ -29,7 +29,7 @@ const EmployeeResult = (props: EmployeeResultProps): JSX.Element => {
 
 const SearchResults = (): JSX.Element => {
     const route = getRouteApi('/')
-    const results = route.useLoaderData()
+    const results: LoaderData = route.useLoaderData()
     const { q } = route.useSearch();
 
     return <main>
