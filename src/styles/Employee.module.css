@@ -1,3 +1,8 @@
+main {
+    display: flex;
+    flex: 1;
+}
+
 .Employee {
   display: flex;
   align-items: center;
