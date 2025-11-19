@@ -5,8 +5,7 @@ import type { Employee as EmployeeType } from "../schemas/employeeSchema.tsx";
 
 const Employee = (): JSX.Element => {
     const employee: EmployeeType = getRouteApi('/employees/$employeeId').useLoaderData()
-    return <main>
-        <div className={styles.Employee}>
+    return <div className={styles.Employee}>
             <div className={styles.Picture}>
                 <img src={employee.imageFilePath} alt="Profile Picture" />
             </div>
@@ -21,6 +20,5 @@ const Employee = (): JSX.Element => {
                 </div>
             </div>
         </div>
-    </main>
 }
 export default Employee
