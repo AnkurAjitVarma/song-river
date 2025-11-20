@@ -13,3 +13,9 @@
   font-family: 'Cinzel Decorative', serif;    
   font-weight: bold;       
 }
+
+.Link {
+    color: inherit;
+    text-decoration: none;
+    display: contents;
+}

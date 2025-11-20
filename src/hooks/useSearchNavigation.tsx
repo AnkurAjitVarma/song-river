@@ -6,6 +6,16 @@ const useSearchNavigation = (debounceMs: number = 300) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+    const onFocus = () => {
+        if(inputRef.current) {
+            navigate({
+                to: '/',
+                search: { q: inputRef.current.value },
+                replace: true
+            })
+        }
+    }
+
     const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
         const searchValue = event.target.value;
 
@@ -41,7 +51,7 @@ const useSearchNavigation = (debounceMs: number = 300) => {
         };
     }, []);
 
-    return { inputRef, handleSearchChange, handleClearSearch };
+    return { onFocus, inputRef, handleSearchChange, handleClearSearch };
 }
 
 export default useSearchNavigation
