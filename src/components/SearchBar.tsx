@@ -9,8 +9,8 @@ type SearchBarProps = {
 }
 
 const SearchBar = ({ height }:SearchBarProps): JSX.Element => {
-    const { inputRef, handleSearchChange, handleClearSearch } = useSearchNavigation(100);
-    return <div className={styles.Search} style={{height: height}}>
+    const { onFocus, inputRef, handleSearchChange, handleClearSearch } = useSearchNavigation(100);
+    return <div className={styles.Search} style={{height: height}} onFocus={onFocus}>
         <span className={styles.Glass}>
             <FaMagnifyingGlass />
         </span>

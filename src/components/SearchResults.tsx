@@ -53,9 +53,6 @@ const SearchResults = (): JSX.Element => {
                 ))}
             </div>
         </div>
-
-
-
 }
 
 export default SearchResults;
