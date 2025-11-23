@@ -35,24 +35,25 @@ const SearchResults = (): JSX.Element => {
     if (results.length === 0)
         return <p>No Results</p>
     else
-        return <div className={styles.SearchResults}>
+        return <section className={styles.SearchResults}>
             <h3>{q === "" ? `All Employees (${results.length})` : `Search Results (${results.length})`}</h3>
-            <div className={styles.Table}>
+            <ul className={styles.Table}>
                 {results.map((employee: Employee) => (
-                    <Link key={employee.id}
-                        to="/employees/$employeeId"
-                        params={{ employeeId: employee.id.toString() }}
-                        className={styles.Link}>
-                        <EmployeeResult
-                            firstName={employee.firstName}
-                            lastName={employee.lastName}
-                            team={employee.teamName}
-                            imageSrc={employee.imageFilePath}
-                        />
-                    </Link>
+                    <li key={employee.id}>
+                        <Link to="/employees/$employeeId"
+                            params={{ employeeId: employee.id.toString() }}
+                            className={styles.Link}>
+                            <EmployeeResult
+                                firstName={employee.firstName}
+                                lastName={employee.lastName}
+                                team={employee.teamName}
+                                imageSrc={employee.imageFilePath}
+                            />
+                        </Link>
+                    </li>
                 ))}
-            </div>
-        </div>
+            </ul>
+        </section>
 }
 
 export default SearchResults;
