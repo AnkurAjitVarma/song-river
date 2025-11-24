@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import SearchResults from "../components/SearchResults.tsx";
 import { loaderDataSchema } from "../schemas/employeeSchema.tsx";
 import { searchSchema } from "../schemas/searchSchema.tsx";
+import Spinner from "../components/Spinner.tsx";
 
 export const Route = createFileRoute('/')({
   component: SearchResults,
@@ -13,6 +14,6 @@ export const Route = createFileRoute('/')({
     const data = await response.json()
     return loaderDataSchema.parse(data);
   },
-  pendingComponent: () => <div>Loading...</div>,
   errorComponent: () => <div>Unable to fetch results.</div>,
+  pendingComponent: Spinner,
 })

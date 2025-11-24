@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import Employee from '../../components/Employee.tsx';
 import { employeeSchema } from "../../schemas/employeeSchema.tsx";
+import Spinner from "../../components/Spinner.tsx";
 
 export const Route = createFileRoute('/employees/$employeeId')({
   component: Employee,
@@ -11,5 +12,5 @@ export const Route = createFileRoute('/employees/$employeeId')({
     return employeeSchema.parse(data);
   },
   errorComponent: () => <div>Error loading employee</div>,
-  pendingComponent: () => <div>Loading...</div>,
+  pendingComponent: Spinner,
 });
