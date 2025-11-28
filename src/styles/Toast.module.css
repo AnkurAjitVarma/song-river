@@ -1,0 +1,51 @@
+.Toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+}
+
+.Error {
+    background-color: #d64545;
+    color: white;
+}
+
+.Success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.Title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.Description {
+    font-size: 14px;
+    opacity: 0.9;
+    color: white;
+}
+
+.CloseButton {
+    position: absolute;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    right: 4px;
+    top: 1px;
+}
+
+.CloseButton svg {
+    width: 16px;
+    height: 16px;
+}
+
+.CloseButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
