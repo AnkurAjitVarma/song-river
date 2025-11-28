@@ -1,5 +1,5 @@
 import { type JSX } from "react";
-import styles from "../styles/Search.module.css"
+import styles from "../styles/SearchBar.module.css"
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
 import useSearchNavigation from "../hooks/useSearchNavigation.tsx";
