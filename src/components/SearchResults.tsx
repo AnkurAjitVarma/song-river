@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { getRouteApi, Link } from "@tanstack/react-router";
 import styles from "../styles/SearchResults.module.css";
-import type { Employee, LoaderData } from "../schemas/employeeSchema.tsx";
+import type { LoaderData, SearchResult } from "../schemas/employeeSchema.tsx";
 
 type EmployeeResultProps = {
     firstName: string;
@@ -38,7 +38,7 @@ const SearchResults = (): JSX.Element => {
         return <section className={styles.SearchResults}>
             <h3>{q === "" ? `All Employees (${results.length})` : `Search Results (${results.length})`}</h3>
             <ul className={styles.Table}>
-                {results.map((employee: Employee) => (
+                {results.map((employee: SearchResult) => (
                     <li key={employee.id}>
                         <Link to="/employees/$employeeId"
                             params={{ employeeId: employee.id.toString() }}
