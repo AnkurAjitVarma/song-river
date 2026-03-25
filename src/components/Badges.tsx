@@ -36,7 +36,11 @@ const Badges = (employee: Employee): JSX.Element => {
                 </ul>
             </>
         ) : (
-            <p>No Badges Yet</p>
+            <>
+                <p>No Badges Yet</p>
+                <AddBadge />
+            </>
+
         )}
     </section>
 }
